@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kusina ni Infante</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-content">
+        <h1 class="logo">Infante's Kitchen</h1>
+    </div>
+    <div class="cart">
+        <img src="public/shopping-cart.png" alt="Cart"/>
+    </div>
+</header>
+
+<div class="menu">
+    <!--    BBQ    -->
+    <div class="card" onclick="openModal(1)">
+        <img src="public/bbq.jpg" alt="Tinuhog na Karne Sabay Babad sa Kalayo" class="card-image"/>
+        <div class="card-content">
+            <h2>Pork BBQ</h2>
+            <p>Tender pork skewers marinated in sweet-savory spices and grilled to perfection.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 1)">Add to Cart</button>
+    </div>
+
+    <!--    BBQ MODAL-->
+    <div id="productModal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(1)"></span>
+            <div class="modal-body">
+                <img src="public/bbq.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Pork BBQ</h2>
+                    <p>Skewered Filipino Pork BBQ or simply pork barbecue are skewered marinated pork sliced. These are
+                        grilled until the pork is cooked and it is also being basted during the process to add flavor
+                        and keep the meat moist. Pork barbecue are better if marinated overnight. This gives the dish
+                        extra flavor that makes it more enjoyable….</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/filipino-skewered-pork-bbq/">See more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    BEEF SINIGANG -->
+    <div class="card" onclick="openModal(2)">
+        <img src="public/beefsinigang.jpg" alt="alsom sana" class="card-image"/>
+        <div class="card-content">
+            <h2>Beef Sinigang</h2>
+            <p>A hearty tamarind-based soup with tender beef and fresh vegetables, offering a perfect balance of
+                savory and sour flavors.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 2)">Add to Cart</button>
+    </div>
+
+    <!--BEEF SINIGANG MODAL-->
+    <div id="productModal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(2)"></span>
+            <div class="modal-body">
+                <img src="public/beefsinigang.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Beef Sinigang</h2>
+                    <p>Sinigang na baka or beef sinigang sa sa kamias is a Filipino soup dish commonly consumed on
+                        regular days. Bilimbi (locally known as kamias) serves as the souring agent. This delicous soup
+                        has a mild amount of sourness and an extra load of “deliciousness” brought about by all of its
+                        components. The beef in this sinigang na baka…</p>
+                    <a target="_blank"
+                       href="https://panlasangpinoy.com/beef-sinigang-sa-kamias-with-gabi-beef-in-sour-broth-with-taro/#wprm-recipe-container-48576">See
+                        more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    BIKO-->
+    <div class="card" onclick="openModal(3)">
+        <img src="public/biko.jpg" alt="bagas na may shoesglue" class="card-image"/>
+        <div class="card-content">
+            <h2>Biko</h2>
+            <p>Sticky rice cooked with coconut milk and brown sugar, perfect for dessert or snack</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 3)">Add to Cart</button>
+    </div>
+
+    <!--BIKO MODAL-->
+    <div id="productModal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(3)"></span>
+            <div class="modal-body">
+                <img src="public/biko.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>BIKO</h2>
+                    <p>Biko is a Filipino rice cake made from sticky rice (locally known as malagkit), coconut milk, and
+                        brown sugar. Like other rice cakes, this is referred to as kakanin (derived from the word
+                        “kanin” which means rice) and is often eaten as dessert or meryenda (mid-afternoon snack).
+
+                        Traditionally, this delicious rice cake is placed over banana leaves in a bilao (round weaven
+                        bamboo tray) and garnished with latik (cooked coconut milk residue) on top. In addition, Biko is
+                        served during special occasions such as birthday parties, family reunions, and town
+                        fiestas..</p>
+                    <a target="_blank"
+                       href="https://panlasangpinoy.com/filipino-asian-food-dessert-rice-cake-biko-recipe/">See
+                        more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    BISTEK-->
+    <div class="card" onclick="openModal(4)">
+        <img src="public/bistek.jpg" alt="again, either sa fiestahan or sa gadan ka lang makaka namit kani"
+             class="card-image"/>
+        <div class="card-content">
+            <h2>Bistek</h2>
+            <p>Thinly sliced beef marinated in soy sauce and calamansi, sautéed with onions</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 4)">Add to Cart</button>
+    </div>
+
+    <!--BISTEK MODAL-->
+    <div id="productModal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(4)"></span>
+            <div class="modal-body">
+                <img src="public/bistek.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>BISTEK</h2>
+                    <p>Bistek Tagalog is a type of Filipino beef stew. This is also known as beef steak to some people.
+                        It is comprised of thin slices of beef and a generous amount of onions. These are stewed in a
+                        soy sauce and lemon juice mixture until the beef gets very tender. It is best enjoyed with warm
+                        rice.</p>
+                    <a target="_blank"
+                       href="https://panlasangpinoy.com/bistek-tagalog-beefsteak-recipe/">See
+                        more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    BULALO-->
+    <div class="card" onclick="openModal(5)">
+        <img src="public/bulalo.jpg" alt="may kamahalan pero masiram" class="card-image"/>
+        <div class="card-content">
+            <h2>Bulalo</h2>
+            <p>A comforting soup made with beef shanks and bone marrow, paired with vegetables.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 5)">Add to Cart</button>
+    </div>
+
+    <!--    BULALO MODAL-->
+    <div id="productModal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(5)"></span>
+            <div class="modal-body">
+                <img src="public/bulalo.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Bulalo</h2>
+                    <p>It’s a well known fact that Filipinos love stew and soup dishes. From the sour sinigang to the
+                        sweet tinola, there’s guaranteed to be a soup dish for every flavor palate preference –– all
+                        great to sip and enjoy, especially during long, cool nights. But one of the most popular, and
+                        arguably most delicious, soups out there, is the classic Bulalo, or beef shank stew.</p>
+                    <a target="_blank"
+                       href="https://panlasangpinoy.com/bulalo-stewed-beef-shank/">See
+                        more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    KARE KARE-->
+    <div class="card" onclick="openModal(6)">
+        <img src="public/karekare.jpeg" alt="sa fiestahan mo lang mananamitan" class="card-image"/>
+        <div class="card-content">
+            <h2>Kare-Kare</h2>
+            <p> peanut-based stew with oxtail, tripe, and vegetables, served with bagoong.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 6)">Add to Cart</button>
+    </div>
+
+    <!--    KARE KARE MODAL-->
+    <div id="productModal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(6)"></span>
+            <div class="modal-body">
+                <img src="public/karekare.jpeg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Kare Kare</h2>
+                    <p>Kare Kare is a traditional Filipino stew complimented with a thick savory peanut sauce. The
+                        commonly used meats for this dish are ox tail, tripe, and pork leg; on some occasions goat and
+                        chicken meat are also used. Besides the peanuts, this dish depends on the shrimp paste (on the
+                        side) in order to be fully enjoyed. Traditionally, “palayok” (clay cooking pot) is used to cook
+                        this dish and it is also used as the serving pot.</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/kare-kare-recipe/">See more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    LAING-->
+    <div class="card" onclick="openModal(7)">
+        <img src="public/laing.jpg" alt="budget meal ulam" class="card-image"/>
+        <div class="card-content">
+            <h2>Laing</h2>
+            <p>Creamy taro leaves simmered in coconut milk, with a touch of spice and shrimp paste.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 7)">Add to Cart</button>
+    </div>
+
+    <!--    LAING MODAL-->
+    <div id="productModal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(7)"></span>
+            <div class="modal-body">
+                <img src="public/laing.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Laing</h2>
+                    <p>Laing (or Natong) is a spicy dish that is Coconut milk (or cream) based with dried taro leaves.
+                        This originated from the Philippine’s Bicol region (south most part of Luzon island). Because of
+                        its really great taste and budget friendly cost, this dish became well known.</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/laing/"></a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    LECHON KAWALI-->
+    <div class="card" onclick="openModal(8)">
+        <img src="public/lechonkawali.jpg" alt="binabad na pork sa cooking oil" class="card-image"/>
+        <div class="card-content">
+            <h2>Lechon Kawali</h2>
+            <p>Crispy deep-fried pork belly, often served with lechon sauce or vinegar.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 8)">Add to Cart</button>
+    </div>
+
+    <!--    LECHON KAWALI MODAL-->
+    <div id="productModal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(8)"></span>
+            <div class="modal-body">
+                <img src="public/lechonkawali.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Lechon Kawali</h2>
+                    <p>Lechon kawali or Pan-roasted pork to some is different from Lechon, the well known Filipino dish
+                        which is also the national dish of the Philippines. While lechon is cooked in a pit filled with
+                        flamed charcoal, Lechon kawali is cooked by boiling then later deep frying a portion of the pig
+                        (pork belly usually).</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/lechon-kawali/">See more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    LUGAW-->
+    <div class="card" onclick="openModal(9)">
+        <img src="public/lugaw.jpg" alt="lugaw ni leni" class="card-image"/>
+        <div class="card-content">
+            <h2>Lugaw</h2>
+            <p>A savory rice porridge flavored with ginger and topped with chicken, boiled eggs, and fried
+                garlic.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 9)">Add to Cart</button>
+    </div>
+
+    <!--    LUGAW MODAL-->
+    <div id="productModal9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(9)"></span>
+            <div class="modal-body">
+                <img src="public/lugaw.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Lugaw</h2>
+                    <p>Lugaw or plain congee is the most basic congee recipe that only requires rice, water, and salt.
+                        This version is somewhat upgraded because I used an ingredient that improves the flavor of the
+                        dish – Rousong. Rousong is made from pork. This is also called pork or meat floss.</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/lugaw-recipe/">See more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    PALABOK-->
+    <div class="card" onclick="openModal(10)">
+        <img src="public/palabok.jpg" alt="pancit bato alternative haha" class="card-image"/>
+        <div class="card-content">
+            <h2>Palabok</h2>
+            <p>Filipino noodle dish with garlic sauce, shrimp, pork, and topped with hard-boiled eggs and crispy
+                chicharrón.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 10)">Add to Cart</button>
+    </div>
+
+    <!--    PALABOK MODAL-->
+    <div id="productModal10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(10)"></span>
+            <div class="modal-body">
+                <img src="public/palabok.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Palabok</h2>
+                    <p>Pancit Palabok is a noodle dish with shrimp sauce and topped with several ingredients such as
+                        cooked shrimp, boiled pork, crushed chicharon, tinapa flakes, fried tofu, scallions, and fried
+                        garlic. A very tasty treat that is sure to relieve your hunger.</p>
+                    <a href="https://panlasangpinoy.com/asian-filipino-food-noodles-pansit-pancit-palabok-recipe/"
+                       target="_blank">See more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    PANCIT-->
+    <div class="card" onclick="openModal(11)">
+        <img src="public/pancit.jpg" alt="pancit bato hehe" class="card-image"/>
+        <div class="card-content">
+            <h2>Pancit</h2>
+            <p>Pancit Canton is a stir-fried noodle dish with vegetables, shrimp, pork, and chicken, flavored with
+                soy sauce and garlic..</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 11)">Add to Cart</button>
+    </div>
+
+    <!--    PANCIT MODAL-->
+    <div id="productModal11" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(11)"></span>
+            <div class="modal-body">
+                <img src="public/pancit.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Pancit</h2>
+                    <p>Pancit Canton it is a type of Lo Mein or tossed noodles known as flour sticks. This dish is often
+                        served during birthdays and special occasions to symbolize long life. It is prepared using a
+                        variety of ingredients, which makes it look festive. There is also a combination of different
+                        flavors that make it delicious.…</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/pancit-canton-recipe/">See more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    PARES-->
+    <div class="card" onclick="openModal(12)">
+        <img src="public/pares.jpg" alt="overrated diwata pares overload" class="card-image"/>
+        <div class="card-content">
+            <h2>Pares</h2>
+            <p>Beef stew made with tender braised beef and typically served with garlic rice and a side of
+                broth.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 12)">Add to Cart</button>
+    </div>
+
+    <!--    PARES MODAL-->
+    <div id="productModal12" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(12)"></span>
+            <div class="modal-body">
+                <img src="public/pares.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Pares</h2>
+                    <p>Beef Pares are cubed beef briskets cooked with spices and tenderized to perfection. The aroma of
+                        this dish alone is enticing. The taste is captivating. You will surely ask for more after
+                        tasting it. I was first introduced to this dish during my elementary days. It was in a local
+                        Tapsilog restaurant in Las Pinas…</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/filipino-food-how-to-cook-beef-pares-recipe/">See
+                        more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    PINAKBET-->
+    <div class="card" onclick="openModal(13)">
+        <img src="public/pinakbet.jpg" alt="garo sana mix veggies" class="card-image"/>
+        <div class="card-content">
+            <h2>Pinakbet</h2>
+            <p>A vegetable dish from the north, cooked with squash, eggplant, okra, and shrimp paste.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 13)">Add to Cart</button>
+    </div>
+
+    <!--    PINAKBET MODAL-->
+    <div id="productModal13" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(13)"></span>
+            <div class="modal-body">
+                <img src="public/pinakbet.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Pinakbet</h2>
+                    <p>Pinakbet Tagalog is a Filipino vegetable dish. It is composed of a variety of vegetables and it
+                        also has a protein component. I made use of lechon kawali or crispy deep-fried pork belly for
+                        this recipe. This recipe is a variation of the popular Pinakbet Ilocano.</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/pinakbet-tagalog-recipe-knr-sc/">See more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    PORKADOBO-->
+    <div class="card" onclick="openModal(14)">
+        <img src="public/porkadobo.jpg" alt="adobo na luto ni mama" class="card-image"/>
+        <div class="card-content">
+            <h2>Pork Adobo</h2>
+            <p>The iconic Filipino dish of chicken or pork marinated in soy sauce, vinegar, garlic, and spices.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 14)">Add to Cart</button>
+    </div>
+
+    <!--    PORK ADOBO MODAL-->
+    <div id="productModal14" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(14)"></span>
+            <div class="modal-body">
+                <img src="public/porkadobo.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Pork Adobo</h2>
+                    <p>Considered by some as the pride of Filipino cuisine, Pork Adobo is definitely a favorite among
+                        many around the world. For this, we cook pork slices in a perfect mix of soy sauce, vinegar, and
+                        garlic to make this savory and sour viand. And I’ve got to say, it’s definitely a great way to
+                        introduce the world to what Pinoy cooks can make! But actually, there are other renditions of
+                        adobo.</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/">See
+                        more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    SHANGHAI-->
+    <div class="card" onclick="openModal(15)">
+        <img src="public/shanghai.jpg" alt="lumpia shanghai karne ang laog" class="card-image"/>
+        <div class="card-content">
+            <h2>Shanghai</h2>
+            <p>Crispy spring rolls filled with ground pork, carrots, and spices, served with sweet chili sauce.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 15)">Add to Cart</button>
+    </div>
+
+    <!--SHANGHAI MODAL-->
+    <div id="productModal15" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(15)"></span>
+            <div class="modal-body">
+                <img src="public/shanghai.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Shanghai</h2>
+                    <p>Lumpiang Shanghai is a Filipino egg roll dish. The filling or meat mixture is mainly composed of
+                        ground pork, minced carrots, and minced onion. Spices and seasonings are added into the mixture.
+                        It is then wrapped and rolled individually in thin flour sheets known as lumpia wrappers.
+
+                        Each piece of lumpia is deep fried until golden brown. This makes it crunchy and more enjoyable
+                        to eat. It is served with either sweet and sour sauce, or with banana ketchup.</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/how-to-cook-lumpiang-shanghai-lumpia-knr-pc/">See
+                        more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    TURON-->
+    <div class="card" onclick="openModal(16)">
+        <img src="public/turon.jpg" alt="turon na may asukar" class="card-image"/>
+        <div class="card-content">
+            <h2>Turon</h2>
+            <p>A crispy dessert made with bananas and jackfruit wrapped in spring roll wrapper and fried with
+                caramelized sugar.</p>
+        </div>
+        <input type="hidden" class="product-price" value="20">
+        <button class="add-to-cart" onclick="addToCart(event, 16)">Add to Cart</button>
+    </div>
+
+    <!--TURON MODAL-->
+    <div id="productModal16" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(16)"></span>
+            <div class="modal-body">
+                <img src="public/turon.jpg" alt="Product Image" class="modal-image"/>
+                <div class="modal-description">
+                    <h2>Turon</h2>
+                    <p>Turon is a type of Filipino snack. It is also called banana lumpia due to its similarity to the
+                        popular Filipino lumpia. A typical Filipino meryenda and dessert, Turon has gained popularity
+                        throughout the years. This sweet snack can usually be seen on the streets being peddled along
+                        with bananacue or even vegetable lumpia</p>
+                    <a target="_blank" href="https://panlasangpinoy.com/turon/">See more...</a>
+                    <p><strong>Price: $20.00</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    TURON-->
+</div>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
