@@ -6,14 +6,31 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
+<!-- header class -->
 <header class="header">
     <div class="header-content">
         <h1 class="logo">Infante's Kitchen</h1>
     </div>
-    <div class="cart">
+    <!--   maluwas lang ni kapag si user nag hover sa cart image  -->
+    <div class="cart" onmouseenter="openCartModal()" onmouseleave="closeCartModal()">
+        <!--    added a span na nag chachange ang value depende sa nasa cart   -->
+        <span class="cart-count" id="cart-value">0</span>
         <img src="public/shopping-cart.png" alt="Cart"/>
+        <div id="cartModal" class="cart-modal">
+            <h2>Your Orders</h2>
+            <div id="cartItemsContainer">
+                <!--        javascript ang nag gegenerate html kaya mayong laog ning div na ni        -->
+            </div>
+            <!--       calculates the total price      -->
+            <span id="cartTotal">0</span>
+        </div>
     </div>
 </header>
+
+<!-- maluwas lang ni if the user clicks the add to cart button -->
+<div id="notificationContainer"></div>
+
 
 <div class="menu">
     <!--    BBQ    -->
