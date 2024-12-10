@@ -93,17 +93,15 @@ function closeCartModal() {
 // ==================================================================================================================================================================
 
 // the html button named "Add to Cart"
-function addToCart(event, productID) {
+function addToCart(productID) {
     // added stopPropagation so that when the user clicks the button it will not trigger the function openModal
     // because the button is inside the div with a function openmodal
-    event.stopPropagation()
+    // event.stopPropagation()
 
-    // gets the price and title from the nearest ancestor
-    let productTitle = event.target.closest('.card').querySelector('.card-content h2').innerHTML
-    let productPrice = event.target.closest('.card').querySelector('.product-price').value
-
-    // console.log(productTitle)
-    // console.log(productPrice)
+    let productTitle = document.getElementById("product" + productID).value
+    let productPrice = document.getElementById("price" + productID).value
+    console.log(productTitle)
+    console.log(productPrice)
 
     // stores the user data from a temporary array
     let product = {
