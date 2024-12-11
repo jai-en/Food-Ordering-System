@@ -53,12 +53,13 @@
   id: productID,
   title: productTitle,
   price: parseInt(productPrice)
+  quantity: productQuantity
 */
 
 let cart = []
 
 //cart.forEach((item) => {
-//  console.log(item.id, item.title, item.price);
+//  console.log(item.id, item.title, item.price, item.quantity);
 //})
 
 
@@ -76,6 +77,7 @@ function openModal(productID) {
 
 function closeModal(productID) {
     document.getElementById("productModal" + productID).style.display = "none"; // sets the modal to hidden from block
+    document.getElementById("quantity" + productID).value = "1";
 }
 
 // ==================================================================================================================================================================
@@ -92,23 +94,37 @@ function closeCartModal() {
 
 // ==================================================================================================================================================================
 
+function incrementQuantity(productID) {
+    const input = document.getElementById(productID);
+    const currentValue = parseInt(input.value, 10);
+    input.value = currentValue + 1;
+}
+
+// ==================================================================================================================================================================
+
+function decrementQuantity(productID) {
+    const input = document.getElementById(productID);
+    const currentValue = parseInt(input.value, 10);
+    if (currentValue > 1) {
+        input.value = currentValue - 1;
+    }
+}
+
+// ==================================================================================================================================================================
+
 // the html button named "Add to Cart"
 function addToCart(productID) {
-    // added stopPropagation so that when the user clicks the button it will not trigger the function openModal
-    // because the button is inside the div with a function openmodal
-    // event.stopPropagation()
-
     let productTitle = document.getElementById("product" + productID).value
     let productPrice = document.getElementById("price" + productID).value
-    console.log(productTitle)
-    console.log(productPrice)
+    // console.log(productTitle)
+    // console.log(productPrice)
 
     // stores the user data from a temporary array
     let product = {
-        id: productID, title: productTitle, price: parseInt(productPrice)
+        id: productID, title: productTitle, price: parseInt(productPrice), quantity: parseInt()
     }
 
-    // console.log(productID, productTitle, productPrice)
+    console.log(productID, productTitle, productPrice)
 
     // inserts the data from product to cart that i initialized from the top of the javascript file
     cart.push(product)
@@ -169,7 +185,6 @@ function updateCartModal() {
         }
     }
 
-
     cartItemsContainer.innerHTML = '';
 
     // initialized the variable total that displays the total price of all the products inside the cart array
@@ -183,6 +198,7 @@ function updateCartModal() {
         const cartItem = document.createElement('div');
         cartItem.classList.add('cart-item');
         cartItem.innerHTML = `
+            <p>${item.quantity}</p>
             <p>${item.title}</p>
             <p>$${item.price}</p>
         `;
@@ -210,3 +226,5 @@ window.onclick = function (event) {
 
     }
 }
+
+// ==================================================================================================================================================================

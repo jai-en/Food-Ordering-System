@@ -14,11 +14,16 @@
     <div class="header-content">
         <h1 class="logo">Infante's Kitchen</h1>
     </div>
+
+    <h1>"First bite, Thankyou lord"</h1>
+
     <!--   maluwas lang ni kapag si user nag hover sa cart image  -->
     <div class="cart" onmouseenter="openCartModal()" onmouseleave="closeCartModal()">
         <!--    added a span na nag chachange ang value depende sa nasa cart   -->
         <span class="cart-count" id="cart-value">0</span>
-        <img src="public/shopping-cart.png" alt="Cart"/>
+        <a href="pages/cart.html" class="cart-link">
+            <img src="public/shopping-cart.png" alt="Cart"/>
+        </a>
         <!------------------------CART MODAL------------------------------------------------------------------------------------------------------------------->
         <div id="cartModal" class="cart-modal">
             <h2>Your Orders</h2>
@@ -70,6 +75,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price1">
                     <input type="hidden" value="Pork BBQ" id="product1">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity1')">-</button>
+                        <input type="text" value="1" id="quantity1" readonly>
+                        <button onclick="incrementQuantity('quantity1')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(1)">Add to Cart</button>
                 </div>
             </div>
@@ -108,6 +118,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price2">
                     <input type="hidden" value="Beef Sinigang" id="product2">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity2')">-</button>
+                        <input type="text" value="1" id="quantity2" readonly>
+                        <button onclick="incrementQuantity('quantity2')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(2)">Add to Cart</button>
                 </div>
             </div>
@@ -150,6 +165,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price3">
                     <input type="hidden" value="Biko" id="product3">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity3')">-</button>
+                        <input type="text" value="1" id="quantity3" readonly>
+                        <button onclick="incrementQuantity('quantity3')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(3)">Add to Cart</button>
                 </div>
             </div>
@@ -189,6 +209,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price4">
                     <input type="hidden" value="Bistek" id="product4">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity4')">-</button>
+                        <input type="text" value="1" id="quantity4" readonly>
+                        <button onclick="incrementQuantity('quantity4')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(4)">Add to Cart</button>
                 </div>
             </div>
@@ -226,6 +251,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price5">
                     <input type="hidden" value="Bulalo" id="product5">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity5')">-</button>
+                        <input type="text" value="1" id="quantity5" readonly>
+                        <button onclick="incrementQuantity('quantity5')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(5)">Add to Cart</button>
                 </div>
             </div>
@@ -263,6 +293,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price6">
                     <input type="hidden" value="Kare Kare" id="product6">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity6')">-</button>
+                        <input type="text" value="1" id="quantity6" readonly>
+                        <button onclick="incrementQuantity('quantity6')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(6)">Add to Cart</button>
                 </div>
             </div>
@@ -293,10 +328,15 @@
                         This originated from the Philippine’s Bicol region (south most part of Luzon island).
                         Because of
                         its really great taste and budget friendly cost, this dish became well known.</p>
-                    <a target="_blank" href="https://panlasangpinoy.com/laing/"></a>
-                    <p><strong>Price: $20.00</strong></p>
+                    <a target="_blank" href="https://panlasangpinoy.com/laing/">See more...</a>
+                    <p class="price"><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price7">
                     <input type="hidden" value="Laing" id="product7">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity7')">-</button>
+                        <input type="text" value="1" id="quantity7" readonly>
+                        <button onclick="incrementQuantity('quantity7')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(7)">Add to Cart</button>
                 </div>
             </div>
@@ -333,6 +373,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price8">
                     <input type="hidden" value="Lechon Kawali" id="product8">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity8')">-</button>
+                        <input type="text" value="1" id="quantity8" readonly>
+                        <button onclick="incrementQuantity('quantity8')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(8)">Add to Cart</button>
                 </div>
             </div>
@@ -368,6 +413,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price9">
                     <input type="hidden" value="Lugaw" id="product9">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity9')">-</button>
+                        <input type="text" value="1" id="quantity9" readonly>
+                        <button onclick="incrementQuantity('quantity9')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(9)">Add to Cart</button>
                 </div>
             </div>
@@ -403,6 +453,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price10">
                     <input type="hidden" value="Palabok" id="product10">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity10')">-</button>
+                        <input type="text" value="1" id="quantity10" readonly>
+                        <button onclick="incrementQuantity('quantity10')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
                 </div>
             </div>
@@ -439,6 +494,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price11">
                     <input type="hidden" value="Pancit" id="product11">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity11')">-</button>
+                        <input type="text" value="1" id="quantity11" readonly>
+                        <button onclick="incrementQuantity('quantity11')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(11)">Add to Cart</button>
                 </div>
             </div>
@@ -476,6 +536,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price12">
                     <input type="hidden" value="Pares" id="product12">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity12')">-</button>
+                        <input type="text" value="1" id="quantity12" readonly>
+                        <button onclick="incrementQuantity('quantity12')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(12)">Add to Cart</button>
                 </div>
             </div>
@@ -511,6 +576,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price13">
                     <input type="hidden" value="Pinakbet" id="product13">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity13')">-</button>
+                        <input type="text" value="1" id="quantity13" readonly>
+                        <button onclick="incrementQuantity('quantity13')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(13)">Add to Cart</button>
                 </div>
             </div>
@@ -550,6 +620,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price14">
                     <input type="hidden" value="Pork Adobo" id="product14">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity14')">-</button>
+                        <input type="text" value="1" id="quantity14" readonly>
+                        <button onclick="incrementQuantity('quantity14')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(14)">Add to Cart</button>
                 </div>
             </div>
@@ -590,6 +665,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price15">
                     <input type="hidden" value="Shanghai" id="product15">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity15')">-</button>
+                        <input type="text" value="1" id="quantity15" readonly>
+                        <button onclick="incrementQuantity('quantity15')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(15)">Add to Cart</button>
                 </div>
             </div>
@@ -627,6 +707,11 @@
                     <p><strong>Price: $20.00</strong></p>
                     <input type="hidden" value="20" id="price16">
                     <input type="hidden" value="Turon" id="product16">
+                    <div class="quantity-container">
+                        <button onclick="decrementQuantity('quantity16')">-</button>
+                        <input type="text" value="1" id="quantity16" readonly>
+                        <button onclick="incrementQuantity('quantity16')">+</button>
+                    </div>
                     <button class="add-to-cart" onclick="addToCart(16)">Add to Cart</button>
                 </div>
             </div>
